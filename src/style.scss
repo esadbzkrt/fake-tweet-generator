@@ -1,0 +1,81 @@
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  border: 0;
+  box-sizing: border-box;
+  font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+}
+
+body {
+  background-color: #000;
+}
+
+.tweet {
+  border: 1px solid #2f3336;
+  width: 600px;
+  margin: 25px auto;
+  padding: 0 16px;
+
+  &-author {
+    height: 48px;
+    margin-top: 12px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 4px;
+
+    img {
+      width: 48px;
+      height: 48px;
+      margin-right: 12px;
+      border-radius: 50%;
+    }
+
+    .name {
+      font-size: 15px;
+      color: white;
+      font-weight: 700;
+    }
+
+    .username {
+      font-size: 15px;
+      color: #6e767d;
+    }
+
+  }
+
+  &-content {
+    padding: 12px 0;
+
+    p {
+      font-size: 23px;
+      line-height: 28px;
+      color: white;
+    }
+  }
+
+  &-stats {
+    height: 53px;
+    display: flex;
+    align-items: center;
+    color: #6e767d;
+    font-size: 15px;
+    border-top: 1px solid #2f3336;
+    b{
+      color: white;
+    }
+
+    span:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+  &-actions{
+    height: 48px;
+    display: flex;
+    border-top: 1px solid #2f3336;
+    color: white;
+    align-items: center;
+    justify-content: space-around;
+
+  }
+}
