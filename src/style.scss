@@ -5,11 +5,94 @@
   border: 0;
   box-sizing: border-box;
   font-family: TwitterChirp, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif !important;
+  outline: 0;
 }
 
-body {
+html, body {
+  height: 100%;
   background-color: #000;
 }
+
+#root {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.tweet-settings {
+  flex: 1;
+  color: white;
+  border-right: 1px solid #2f3336;
+  height: 100%;
+  padding: 25px;
+
+  h3 {
+    font-size: 24px;
+    font-weight: normal;
+    border-bottom: 1px solid #2f3336;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+  }
+
+  ul{
+    li:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+
+  .input {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #2f3336;
+    color: white;
+    padding: 10px 0 15px;
+
+    &::placeholder {
+      color: white;
+      font-size: 15px;
+    }
+    &:focus{
+      border-color: #4e555a;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+button{
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  font-size: 16px;
+  color: white;
+  background: #1da1f2;
+  cursor: pointer;
+}
+  .textarea {
+    width: 100%;
+    background: transparent;
+    border-bottom: 1px solid #2f3336;
+    color: white;
+    padding: 10px 0 15px;
+    line-height: 1.5;
+    resize: none;
+
+    &::placeholder {
+      color: white;
+      font-size: 15px;
+    }
+    &:focus{
+      border-color: #4e555a;
+      &::placeholder {
+        color: transparent;
+      }
+    }
+  }
+}
+
+.tweet-container {
+  padding: 0 50px;
+}
+
 
 .tweet {
   border: 1px solid #2f3336;
@@ -35,6 +118,13 @@ body {
       font-size: 15px;
       color: white;
       font-weight: 700;
+      display: flex;
+      align-items: center;
+      height: 19px;
+
+      svg {
+        margin-left: 3px;
+      }
     }
 
     .username {
@@ -51,6 +141,11 @@ body {
       font-size: 23px;
       line-height: 28px;
       color: white;
+      hyphens: auto;
+      span{
+        color: #1da1f2;
+
+      }
     }
   }
 
@@ -61,7 +156,8 @@ body {
     color: #6e767d;
     font-size: 15px;
     border-top: 1px solid #2f3336;
-    b{
+
+    b {
       color: white;
     }
 
@@ -69,7 +165,8 @@ body {
       margin-right: 20px;
     }
   }
-  &-actions{
+
+  &-actions {
     height: 48px;
     display: flex;
     border-top: 1px solid #2f3336;
